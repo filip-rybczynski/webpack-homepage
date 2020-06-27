@@ -88,5 +88,23 @@ module.exports = {
       chunks: ["index", "another"],
       filename: "another.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/cytaty.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "cytaty.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/kanada.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "kanada.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/nauka-html.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "nauka-html.html",
+    }),
   ],
 };
