@@ -1,0 +1,237 @@
+@import "_variables.scss";
+@import "modules/navigation.scss";
+@import "~normalize.css";
+
+
+/* =================== Browser ===================== */
+
+.body-background {
+    background: linear-gradient(
+      90deg,
+      rgba(221, 201, 138, 1) 0%,
+      rgba(244, 232, 193, 1) 50%,
+      rgba(221, 201, 138, 1) 100%
+    );
+    max-width: 1500px;
+    min-width: 450px;
+    @media screen and (max-width: $mobileBreakpoint) {
+          background: rgb(221, 201, 138);
+          min-width: 320px;
+        }
+  }
+
+  /* ------- Navigation bar ------- */
+
+  .hamburger {
+  display: none;
+  @media screen and (max-width: $mobileBreakpoint) {
+      display: block;
+      position: absolute;
+      top: 22px;
+      right: 16px;
+      border: none;
+      background: none;
+    }
+  }
+
+  
+
+  /* ----- Main section ----- */
+  #top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: $mobileBreakpoint) {
+          margin-top: 64px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        
+
+  }
+
+  .main-header {
+    color: #00633d;
+    margin-bottom: 0.25em;
+      font-size: 2em;
+
+      @media screen and (max-width: $mobileBreakpoint) {
+          font-size: 7vw;
+          margin-bottom: 0.25em;
+        }
+
+  }
+
+  .main-position {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+
+  .main-section {
+    margin: 0px;
+    &__article {
+        background: #99c6cf;
+        padding: 8px;
+        padding-top: 0px;
+        border: 4px solid;
+        border-radius: 8px;
+        max-width: 600px;
+        margin: 0px auto 10px;
+        &--left {
+            position: relative;
+            right: 20px;
+          }
+          &--right {
+            position: relative;
+            left: 20px;
+          }
+          @media screen and (max-width: $mobileBreakpoint) {          
+              position: static;
+          }
+      }
+      &__content {
+        color: #124e61;
+      }
+      &__header {
+        color: #124e61;
+        margin: 10px;
+
+        @media screen and (max-width: $mobileBreakpoint) {
+              font-size: 5vw;
+              margin-bottom: 0.5em;
+            }
+
+        &--secondary {
+            color: #1a3127;
+            margin-bottom: 10px;
+            &::before {
+                content: "⭐ ";
+              }
+          }
+      }
+      &__image {
+        height: 300px;
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 50%;
+      }
+      &__list {
+        margin-bottom: 8px;
+      }
+
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ----- table ----- */
+
+  .canada-table {
+    table-layout: fixed;
+    width: 60%;
+    border: 2px solid #124e61;
+    border-collapse: collapse;
+    color: #124e61;
+    text-align: center;
+    margin: auto;
+    &__caption {
+        caption-side: bottom;
+        color: rgba(18, 78, 97, 0.7);
+        text-align: right;
+      }
+      &__dark-column {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      &__head {
+        color: #1a3127;
+      }
+      & td {
+        padding: 4px;
+        border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
+        border-right: 1px rgba(0, 0, 0, 0.5) solid;
+        &:nth-child(1) {
+            font-weight: bold;
+          }
+      }
+
+    & th {
+      padding: 4px;
+      border-bottom: 1px rgba(0, 0, 0, 0.5) solid;
+      border-right: 1px rgba(0, 0, 0, 0.5) solid;
+      &:nth-child(1) {
+            width: 10%;
+          }
+        &:nth-child(2) {
+            width: 30%;
+          }
+          &:nth-child(3) {
+            width: 25%;
+          }
+          &:nth-child(4) {
+            width: 35%;
+          }
+      
+      
+    }
+    
+  }
+
+
+  /* ----- Gallery ----- */
+
+  .gallery {
+    margin: 0px auto 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-between;
+    &__photo {
+        display: inline-block;
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+        background-color: #124e61;
+      }
+  }
+
+
+  /* ----- Footer ----- */
+
+  .footer {
+    color: #f4e8c1;
+    background: #124e61;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    &__link {
+        color: #99c6cf;
+        margin-left: 20px;
+      }
+  }
+
+
+    
+
+    .button {
+        @media screen and (max-width: $mobileBreakpoint) {
+      display: none;}
+    }
+
+
+.potato-class {
+    color: hotpink;
+  }
+
+  
