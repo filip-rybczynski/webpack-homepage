@@ -2,16 +2,10 @@
 @import "modules/navigation.scss";
 @import "~normalize.css";
 
-
 /* =================== Browser ===================== */
 
 .body-background {
-    background: linear-gradient(
-      90deg,
-      rgba(221, 201, 138, 1) 0%,
-      rgba(244, 232, 193, 1) 50%,
-      rgba(221, 201, 138, 1) 100%
-    );
+    background: var(--background-color);
     max-width: 1500px;
     min-width: 450px;
     @media screen and (max-width: $mobileBreakpoint) {
@@ -75,10 +69,10 @@
   .main-section {
     margin: 0px;
     &__article {
-        background: #99c6cf;
+        background: var(--light-background);
         padding: 8px;
         padding-top: 0px;
-        border: 4px solid;
+        border: 4px solid var(--rich-color);
         border-radius: 8px;
         max-width: 600px;
         margin: 0px auto 10px;
@@ -95,10 +89,10 @@
           }
       }
       &__content {
-        color: #124e61;
+        color: var(--basic);
       }
       &__header {
-        color: #124e61;
+        color: var(--basic);
         margin: 10px;
 
         @media screen and (max-width: $mobileBreakpoint) {
@@ -107,7 +101,7 @@
             }
 
         &--secondary {
-            color: #1a3127;
+            color: var(--rich-color);
             margin-bottom: 10px;
             &::before {
                 content: "⭐ ";
@@ -153,7 +147,7 @@
         background-color: rgba(0, 0, 0, 0.1);
       }
       &__head {
-        color: #1a3127;
+        color: var(--rich-color);
       }
       & td {
         padding: 4px;

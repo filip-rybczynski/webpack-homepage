@@ -1,2 +1,18 @@
-$wtf: #2D2241;
+
 $mobileBreakpoint: 425px;
+
+:root {
+    --background-color: linear-gradient(
+      90deg,
+      rgba(221, 201, 138, 1) 0%,
+      rgba(244, 232, 193, 1) 50%,
+      rgba(221, 201, 138, 1) 100%
+    );
+
+      --rich-color: #1a3127;
+
+      --light-background: #99c6cf;
+
+      --basic: #124e61;
+
+  }
