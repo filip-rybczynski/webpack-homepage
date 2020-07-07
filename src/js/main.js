@@ -21,12 +21,12 @@ if (age % 10 < 5 && age % 10 > 1) {
 
 let time = moment().format("H:mm");
 
-let clock = `Otworzyłeś tę stronę o godzinie ${time}`;
+let clock = `Strona została otwarta o godzinie ${time}`;
 
 const test = document.querySelector(".timestamp--js");
 
 if (test) {
-  test.innerHTML = `Witaj! ${clock}`;
+  test.innerHTML = clock;
 }
 
 /* alert('Eloszka! Sprawdź log'); */
@@ -65,28 +65,29 @@ button.addEventListener("click", () => {
   }
 });
 
-const nightMode = document.querySelector(".night-mode-toggle--js");
 
-let isNightModeOn = 0;
 const bodyGradient = getComputedStyle(
   document.querySelector(".body-background")
 ).backgroundImage;
 
-nightMode.addEventListener("click", () => {
-  if (isNightModeOn) {
+const nightMode = document.querySelector(".night-mode--js");
+
+let isNightMode = false;
+
+nightMode.addEventListener("change", () => {
+  if (isNightMode) {
     document.documentElement.style.setProperty(
       "--background-color",
       `${bodyGradient}`
     );
     document.documentElement.style.setProperty("--rich-color", "#1a3127");
     document.documentElement.style.setProperty("--light-background", "#99c6cf");
-    nightMode.innerHTML = "Tryb nocny";
-    isNightModeOn--;
+    isNightMode = false;
   } else {
-    document.documentElement.style.setProperty("--background-color", "black");
+    document.documentElement.style.setProperty("--background-color", "#111111");
     document.documentElement.style.setProperty("--rich-color", "#99c6cf");
-    document.documentElement.style.setProperty("--light-background", "black");
-    nightMode.innerHTML = "Tryb normalny";
-    isNightModeOn++;
+    document.documentElement.style.setProperty("--light-background", "#111111");
+
+    isNightMode = true;
   }
-});
+  });
