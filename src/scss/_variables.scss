@@ -16,3 +16,18 @@ $mobileBreakpoint: 425px;
       --basic: #124e61;
 
   }
+
+  @keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes shine {
+    100% {
+      transform: rotateZ(60deg) translate(1em, -9em);
+    }
+  }
