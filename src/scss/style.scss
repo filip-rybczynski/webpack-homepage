@@ -1,9 +1,13 @@
 @import "_variables.scss";
 @import "modules/navigation.scss";
 @import "~normalize.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap");
 
 /* =================== Browser ===================== */
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
 
 .body-background {
   background: var(--background-color);
@@ -296,10 +300,10 @@
     transform: rotateZ(60deg) translate(-5em, 7.5em);
   }
 
-  &:hover::after, &:focus::after {
+  &:hover::after,
+  &:focus::after {
     animation: shine 1s forwards 0.8s;
   }
-
 }
 
 .potato-class {
