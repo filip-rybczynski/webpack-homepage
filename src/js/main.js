@@ -82,12 +82,17 @@ nightMode.addEventListener("change", () => {
     );
     document.documentElement.style.setProperty("--rich-color", "#1a3127");
     document.documentElement.style.setProperty("--light-background", "#99c6cf");
+    document.documentElement.style.setProperty("--basic", "#124e61");
+    document.documentElement.style.setProperty("--basic-navigation", "#124e61");
+    document.documentElement.style.setProperty("--rich-color-menu", "#1a3127");
     isNightMode = false;
   } else {
     document.documentElement.style.setProperty("--background-color", "#111111");
     document.documentElement.style.setProperty("--rich-color", "#99c6cf");
     document.documentElement.style.setProperty("--light-background", "#111111");
-
+    document.documentElement.style.setProperty("--basic", "#99c6cf");
+    document.documentElement.style.setProperty("--basic-navigation", "#111111");
+    document.documentElement.style.setProperty("--rich-color-menu", "#111111");
     isNightMode = true;
   }
   });

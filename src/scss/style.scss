@@ -249,14 +249,14 @@ body {
 
 .footer {
   color: #f4e8c1;
-  background: #124e61;
+  background: var(--basic);
   padding: 16px;
   border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   &__link {
-    color: #99c6cf;
+    color: var(--light-background);
     margin-left: 20px;
   }
 }
