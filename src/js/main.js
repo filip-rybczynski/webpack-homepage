@@ -23,10 +23,10 @@ let time = moment().format("H:mm");
 
 let clock = `Strona została otwarta o godzinie ${time}`;
 
-const test = document.querySelector(".timestamp--js");
+const stamp = document.querySelector(".timestamp--js");
 
-if (test) {
-  test.innerHTML = clock;
+if (stamp) {
+  stamp.innerHTML = clock;
 }
 
 /* alert('Eloszka! Sprawdź log'); */
@@ -52,8 +52,9 @@ const button = document.querySelector(".action--js");
 
 let headingStatus = 0;
 
+const heading = document.querySelector(".main-header");
+
 button.addEventListener("click", () => {
-  const heading = document.querySelector(".main-header");
   heading.classList.toggle("potato-class");
 
   if (headingStatus) {
@@ -65,7 +66,6 @@ button.addEventListener("click", () => {
   }
 });
 
-
 const bodyGradient = getComputedStyle(
   document.querySelector(".body-background")
 ).backgroundImage;
@@ -75,6 +75,9 @@ const nightMode = document.querySelector(".night-mode--js");
 let isNightMode = false;
 
 nightMode.addEventListener("change", () => {
+
+  const homepageLinkBorder = document.querySelector(".navigation__link--homepage");
+
   if (isNightMode) {
     document.documentElement.style.setProperty(
       "--background-color",
@@ -84,7 +87,10 @@ nightMode.addEventListener("change", () => {
     document.documentElement.style.setProperty("--light-background", "#99c6cf");
     document.documentElement.style.setProperty("--basic", "#124e61");
     document.documentElement.style.setProperty("--basic-navigation", "#124e61");
-    document.documentElement.style.setProperty("--rich-color-menu", "#1a3127");
+    document.documentElement.style.setProperty("--beige-text", "#f4e8c1");
+
+    homepageLinkBorder.classList.toggle("navigation__link--homepage-nightmode");
+    heading.classList.toggle("main-header-nightmode");
     isNightMode = false;
   } else {
     document.documentElement.style.setProperty("--background-color", "#111111");
@@ -92,7 +98,10 @@ nightMode.addEventListener("change", () => {
     document.documentElement.style.setProperty("--light-background", "#111111");
     document.documentElement.style.setProperty("--basic", "#99c6cf");
     document.documentElement.style.setProperty("--basic-navigation", "#111111");
-    document.documentElement.style.setProperty("--rich-color-menu", "#111111");
+    document.documentElement.style.setProperty("--beige-text", "#111111");
+
+    homepageLinkBorder.classList.toggle("navigation__link--homepage-nightmode");
+    heading.classList.toggle("main-header-nightmode");
     isNightMode = true;
   }
   });

@@ -110,6 +110,10 @@ body {
     font-size: 7vw;
     margin-bottom: 0.25em;
   }
+
+  &-nightmode {
+    color: #afd46a;
+  }
 }
 
 .main-position {
@@ -248,7 +252,7 @@ body {
 /* ----- Footer ----- */
 
 .footer {
-  color: #f4e8c1;
+  color: var(--beige-text);
   background: var(--basic);
   padding: 16px;
   border-radius: 8px;
@@ -258,6 +262,9 @@ body {
   &__link {
     color: var(--light-background);
     margin-left: 20px;
+    &:hover {
+      color: #f4e8c1;
+    }
   }
 }
 
