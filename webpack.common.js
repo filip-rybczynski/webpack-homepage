@@ -100,5 +100,11 @@ module.exports = {
       chunks: ["index", "main"],
       filename: "nauka-html.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/repositories.html",
+      inject: true,
+      chunks: ["index", "main"],
+      filename: "repositories.html",
+    }),
   ],
 };

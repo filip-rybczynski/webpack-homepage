@@ -5,6 +5,22 @@ const name = "Filip";
 const DoB = "1994-01-14";
 let age = moment().diff(DoB, "years");
 
+fetch('https://api.github.com/users/filip-rybczynski/repos?sort=created&direction=asc')
+.then(resp => resp.json())
+.then(resp => {
+  for (let repo of resp) {
+    const {name, html_url} = repo;
+    const repositoryList = document.querySelector('.list--js');
+    const myTemplate = `<li>
+    ${name} - <a href="${html_url}" title="link do repozytorium">link</a>
+    </li>`;
+    repositoryList.innerHTML += myTemplate; //operator += pozwala dopisywać bez nadpisywania
+  }
+})
+.catch(error => {
+  console.log(error);
+})
+
 // let time2 =
 //   today.getHours() +
 //   ":" +
