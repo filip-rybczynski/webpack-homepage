@@ -101,6 +101,13 @@ body {
   }
 }
 
+.list {
+  margin-bottom: 0.25em;
+  &_link {
+    color: var(--basic);
+  }
+}
+
 .main-header {
   color: #00633d;
   margin-bottom: 0.25em;

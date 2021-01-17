@@ -11,8 +11,8 @@ fetch('https://api.github.com/users/filip-rybczynski/repos?sort=created&directio
   for (let repo of resp) {
     const {name, html_url} = repo;
     const repositoryList = document.querySelector('.list--js');
-    const myTemplate = `<li>
-    ${name} - <a href="${html_url}" title="link do repozytorium">link</a>
+    const myTemplate = `<li class="list">
+    ${name} (<a class="list_link" href="${html_url}" title="link do repozytorium">link</a>)
     </li>`;
     repositoryList.innerHTML += myTemplate; //operator += pozwala dopisywać bez nadpisywania
   }
