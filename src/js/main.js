@@ -74,7 +74,7 @@ const nightMode = document.querySelector(".night-mode--js");
 
 let isNightMode = false;
 
-console.log(localStorage.getItem("nightMode"));
+// console.log(localStorage.getItem("nightMode"));
 
 nightMode.addEventListener("change", () => {
 
