@@ -6,4 +6,4 @@ import '../scss/style.scss';
 
 /* place your code below */
 
-console.log('HELLO 🚀')
+// console.log('HELLO 🚀')
